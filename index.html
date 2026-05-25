@@ -41,13 +41,6 @@
   .progress-track { height:5px; background:var(--border); border-radius:99px; overflow:hidden; }
   .progress-fill { height:100%; background:linear-gradient(90deg,var(--groen),var(--groen-mid)); border-radius:99px; transition:width 0.4s ease; }
 
-  .flow-balk { background:#fff; padding:12px 16px; border-bottom:1px solid var(--border); display:none; overflow-x:auto; }
-  .flow-stappen { display:flex; align-items:center; gap:4px; min-width:max-content; width:100%; justify-content:space-between; }
-  .flow-stap { display:flex; align-items:center; gap:6px; padding:6px 12px; border-radius:99px; font-family:'Nunito',sans-serif; font-size:12px; font-weight:700; color:var(--grijs); border:none; background:transparent; white-space:nowrap; cursor: pointer; }
-  .flow-stap.actief { color:var(--groen); background:var(--groen-licht); box-shadow:inset 0 0 0 1px var(--border); }
-  .flow-stap.klaar { color: var(--groen-mid); }
-  .flow-pijl { color:var(--border); font-size:12px; }
-
   .container { max-width:640px; margin:0 auto; padding:0 16px 80px; }
   .screen { display:none; animation:fadeUp 0.32s ease both; }
   .screen.active { display:block; }
@@ -74,7 +67,6 @@
   .optie-check { width:20px; height:20px; border-radius:50%; border:2px solid var(--border); flex-shrink:0; display:flex; align-items:center; justify-content:center; }
   .optie.selected .optie-check { background:var(--groen); border-color:var(--groen); }
   .optie.selected .optie-check::after { content:'✓'; color:#fff; font-size:11px; font-weight:800; }
-  .optie-knipoog { color: var(--oranje-accent); font-size: 12px; font-style: italic; margin-left: 49px; margin-top: 2px; font-weight: 600; }
 
   .multi-opties { display:flex; flex-direction:column; gap:8px; }
   .multi-optie { display:flex; flex-direction:column; align-items:flex-start; padding:12px 14px; border:2px solid var(--border); border-radius:10px; cursor:pointer; transition:all 0.15s; background:#fff; width:100%; text-align:left; font-family:'Nunito Sans',sans-serif; }
@@ -85,13 +77,10 @@
   .multi-optie.selected .multi-box { background:var(--groen); border-color:var(--groen); }
   .multi-optie.selected .multi-box::after { content:'✓'; color:#fff; font-size:11px; font-weight:800; }
   .multi-label { font-size:14px; font-weight:600; color:var(--donker); display:block; }
-  .multi-knipoog { color: var(--oranje-accent); font-size: 12px; font-style: italic; margin-left: 32px; margin-top: 2px; font-weight: 600; }
-
-  .dynamisch-apparatuur-blok { display:none; background:var(--warm); padding:16px; border-radius:12px; margin-top:12px; border-left:4px solid var(--groen); text-align:left; }
 
   .open-regel-wrap { margin-top:10px; text-align:left; }
   .open-regel-label { font-size:12px; font-weight:700; color:var(--grijs); margin-bottom:5px; display:block; }
-  .open-regel { width:100%; border:2px solid var(--border); border-radius:10px; padding:11px 14px; font-family:'Nunito Sans',sans-serif; font-size:13px; outline:none; background:#fff; }
+  .open-regel { width:100%; border:2px solid var(--border); border-radius:10px; padding:11px 14px; font-family:'Nunito Sans',sans-serif; font-size:13px; outline:none; background:#fff; resize: vertical; }
   .open-regel:focus { border-color:var(--groen); }
 
   .prijs-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
@@ -100,7 +89,6 @@
   .prijs-kaart.selected { border-color:var(--groen); background:var(--groen-licht); }
   .prijs-bedrag { font-size:16px; font-weight:800; color:var(--donker); }
   .prijs-omschr { font-size:11px; color:var(--grijs); font-family:'Nunito Sans',sans-serif; }
-  .prijs-knipoog { color: var(--oranje-accent); font-size: 11px; font-style: italic; font-weight: 600; margin-top: 3px; text-align: center; }
 
   .slider-wrap { margin-top:8px; }
   .slider-display { text-align:center; font-family:'Nunito',sans-serif; font-size:28px; font-weight:900; color:var(--groen); margin-bottom:10px; }
@@ -115,22 +103,13 @@
   .btn-verder:disabled { background:var(--border); color:var(--grijs); cursor:not-allowed; }
 
   .sectie-tag { display:inline-flex; align-items:center; background:var(--warm); border-radius:99px; padding:5px 14px; font-size:11px; font-weight:700; color:var(--oranje-accent); margin:22px 0 2px; text-transform:uppercase; }
-  .cel-btn { width:28px; height:28px; border-radius:6px; border:2px solid var(--border); background:#fff; cursor:pointer; font-weight:700; color:var(--grijs); display:flex; align-items:center; justify-content:center; margin:0 auto; }
-  .cel-btn.selected { background:var(--groen); border-color:var(--groen); color:#fff; }
-  .row-all-btn { background: var(--warm); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; font-size: 10px; font-weight: 700; color: var(--groen); cursor: pointer; }
-  .col-all-btn { background: var(--groen-licht); border: 1px solid var(--border); border-radius: 4px; padding: 4px; font-size: 10px; font-weight: 700; color: var(--groen); cursor: pointer; width: 28px; height: 22px; display: block; margin: 0 auto; }
+
   .tijdslot-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px; }
-  .tijdslot { border:2px solid var(--border); border-radius:12px; padding:12px; cursor:pointer; text-align:center; background:#fff; font-family:'Nunito', sans-serif; font-size:13px; font-weight:700; color:var(--donker); text-align:left; display: flex; flex-direction: column; }
-  .tijdslot-knipoog { color: var(--oranje-accent); font-size: 11px; font-style: italic; font-weight: 600; margin-top: 4px; }
+  .tijdslot { border:2px solid var(--border); border-radius:12px; padding:12px; cursor:pointer; text-align:center; background:#fff; font-family:'Nunito', sans-serif; font-size:13px; font-weight:700; color:var(--donker); display: flex; flex-direction: column; }
   .tijdslot.selected { border-color:var(--groen); background:var(--groen-licht); }
+
   .check-circle { width:68px; height:68px; background:var(--groen); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; margin:0 auto 14px; }
   
-  .voorbeeld-rijen { display:flex; flex-direction:column; gap:5px; margin-top:8px; }
-  .voorbeeld-rij { display:flex; align-items:flex-start; gap:8px; padding:8px 12px; background:var(--creme); border-radius:8px; border:1px solid var(--border); text-align:left; }
-  .vb-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
-  .vb-tekst { font-size:12px; color:var(--tekst); line-height:1.45; }
-  .vb-tekst strong { color:var(--donker); font-weight:700; }
-
   .afsluiting-titel { font-family:'Nunito',sans-serif; font-size:22px; font-weight:900; color:var(--donker); margin-bottom:8px; }
   .afsluiting-tekst { font-size:14px; color:var(--grijs); line-height:1.6; margin-bottom:16px; }
 </style>
@@ -154,10 +133,6 @@
   </div>
 </div>
 
-<div class="flow-balk" id="flow-balk">
-  <div class="flow-stappen" id="flow-stappen"></div>
-</div>
-
 <div class="progress-bar-wrap" id="progress-bar-wrap">
   <div class="progress-meta"><span id="progress-label">Start</span><span id="progress-pct">0%</span></div>
   <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
@@ -174,8 +149,8 @@
         <span class="ln-en">Your input builds the Hub</span>
       </div>
       <div class="vraag-sub" style="text-align:left; margin-top:15px; font-size:14px; line-height:1.6;">
-        <span class="ln-nl">In de regio Eindhoven en Zuidoost-Brabant ontbreekt het aan professionele gedeelde foodkeuken(s). We onderzoeken of er genoeg vraag en aanbod is om dat te veranderen.<br><br>Dit gaat over <strong>kleinschalige, semi-professionele productie van eten en drinken</strong> — geen industriële lijnen, maar ook geen thuiskeuken. Denk aan: ambachtelijke limonade, kimchi, verse kaas, hybride burgers, en meer.</span>
-        <span class="ln-en">In the Eindhoven and Southeast Brabant region, professional shared food kitchen architecture is lacking. We investigate demand matrices to spark local growth.<br><br>This addresses <strong>small-scale, semi-professional food and beverage manufacturing</strong> — skipping industrial lines and home kitchens alike.</span>
+        <span class="ln-nl">In de regio Eindhoven en Zuidoost-Brabant ontbreekt het aan professionele gedeelde foodkeuken(s). Dit gaat over <strong>kleinschalige, semi-professionele productie</strong> van eten en drinken.</span>
+        <span class="ln-en">In the Eindhoven and Southeast Brabant region, professional shared food kitchen infrastructure is lacking. We investigate demand for <strong>small-scale, semi-professional food production</strong>.</span>
       </div>
       <button class="btn-verder" id="start-btn" onclick="goto('screen-1')">
         <span class="ln-nl">Starten →</span><span class="ln-en">Start →</span>
@@ -186,7 +161,7 @@
 
 <div class="screen" id="screen-1">
   <div class="card">
-    <div class="vraag-nr">Question 1</div>
+    <div class="vraag-nr"><span class="ln-nl">Vraag 1</span><span class="ln-en">Question 1</span></div>
     <div class="vraag-tekst">
       <span class="ln-nl">Wat past het beste bij jou?</span>
       <span class="ln-en">Which option aligns with you?</span>
@@ -201,6 +176,7 @@
           <div class="optie-icon-wrap">🏠</div>
           <div class="optie-tekst">
             <span class="optie-label"><span class="ln-nl">Ik heb een keuken en wil die verhuren</span><span class="ln-en">I have a kitchen and want to rent it</span></span>
+            <span class="optie-desc"><span class="ln-nl">Keukeneigenaar</span><span class="ln-en">Kitchen Owner</span></span>
           </div>
           <div class="optie-check"></div>
         </div>
@@ -210,6 +186,7 @@
           <div class="optie-icon-wrap">🔍</div>
           <div class="optie-tekst">
             <span class="optie-label"><span class="ln-nl">Ik zoek een professionele keuken</span><span class="ln-en">I need to rent a professional kitchen</span></span>
+            <span class="optie-desc"><span class="ln-nl">Foodmaker</span><span class="ln-en">Foodmaker</span></span>
           </div>
           <div class="optie-check"></div>
         </div>
@@ -218,7 +195,7 @@
         <div class="optie-top-row">
           <div class="optie-icon-wrap">🔄</div>
           <div class="optie-tekst">
-            <span class="optie-label"><span class="ln-nl">Beiden</span><span class="ln-en">Both</span></span>
+            <span class="optie-label"><span class="ln-nl">Beiden — Ik heb capaciteit EN zoek ook ruimte</span><span class="ln-en">Both — I have space and also need to rent</span></span>
           </div>
           <div class="optie-check"></div>
         </div>
@@ -242,60 +219,154 @@
   </div>
 </div>
 
-<div class="screen" id="screen-fin">
+<div class="screen" id="screen-2">
+  <div class="sectie-tag"><span class="ln-nl">🏠 Keukeneigenaar</span><span class="ln-en">🏠 Kitchen Owner</span></div>
   <div class="card">
-    <div style="text-align:center; padding:30px 20px;">
-      <div class="check-circle">🎉</div>
-      <div class="afsluiting-titel">
-        <span class="ln-nl">Bedankt!</span>
-        <span class="ln-en">Thank you!</span>
-      </div>
-      <div class="afsluiting-tekst">
-        <span class="ln-nl">Je antwoorden zijn opgeslagen. Hoe wil je op de hoogte blijven?</span>
-        <span class="ln-en">Your answers are saved. How would you like to stay updated?</span>
-      </div>
-      <input type="email" id="respondent-email" class="open-regel" style="margin-top:15px;" placeholder="your@email.com">
-      
-      <div class="opties" style="margin-top:20px;">
-        <button class="optie" onclick="selectSingle(this,'mail-opt')">
-          <div class="optie-top-row">
-            <div class="optie-icon-wrap">📣</div>
-            <div class="optie-tekst">
-              <span class="optie-label"><span class="ln-nl">Houd me op de hoogte</span><span class="ln-en">Keep me updated</span></span>
-            </div>
-            <div class="optie-check"></div>
-          </div>
-        </button>
-        <button class="optie" onclick="selectSingle(this,'mail-opt')">
-          <div class="optie-top-row">
-            <div class="optie-icon-wrap">🔒</div>
-            <div class="optie-tekst">
-              <span class="optie-label"><span class="ln-nl">Blijf anoniem</span><span class="ln-en">Stay anonymous</span></span>
-            </div>
-            <div class="optie-check"></div>
-          </div>
-        </button>
-      </div>
+    <div class="vraag-nr"><span class="ln-nl">Vraag 2</span><span class="ln-en">Question 2</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Wat voor type keuken heb jij?</span>
+      <span class="ln-en">What type of kitchen do you have?</span>
+    </div>
+    <div class="opties">
+      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">🍽️</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Restaurant/Horecakeuken</span><span class="ln-en">Restaurant/Catering Kitchen</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">🍞</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Bakkerij</span><span class="ln-en">Bakery</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">🥩</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Slagerij</span><span class="ln-en">Butcher</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">🥛</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Zuivelkeuken</span><span class="ln-en">Dairy Kitchen</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">Overig</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Anders</span><span class="ln-en">Other</span></span></div><div class="optie-check"></div></div></button>
     </div>
   </div>
 
-  <div class="nav-wrap" style="justify-content:center;">
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 3</span><span class="ln-en">Question 3</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Wat vind je een reële vergoeding per dagdeel (4 uur)?</span>
+      <span class="ln-en">What's a fair rate per 4-hour slot?</span>
+    </div>
+    <div class="prijs-grid">
+      <button class="prijs-kaart" onclick="selectPrijs(this,'tarief-v')"><span class="prijs-bedrag">Onder €50</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this,'tarief-v')"><span class="prijs-bedrag">€50–€100</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this,'tarief-v')"><span class="prijs-bedrag">€100–€150</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this,'tarief-v')"><span class="prijs-bedrag">Boven €150</span></button>
+    </div>
+  </div>
+
+  <div class="nav-wrap">
+    <button class="btn-terug" onclick="goto('screen-1')">←</button>
+    <button class="btn-verder" onclick="goto('screen-3')">
+      <span class="ln-nl">Verder →</span><span class="ln-en">Next →</span>
+    </button>
+  </div>
+</div>
+
+<div class="screen" id="screen-3">
+  <div class="sectie-tag"><span class="ln-nl">🍳 Foodmaker</span><span class="ln-en">🍳 Foodmaker</span></div>
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 2</span><span class="ln-en">Question 2</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Wat wil jij maken?</span>
+      <span class="ln-en">What will you produce?</span>
+    </div>
+    <div class="multi-opties">
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🧁 Banketbakkerij/Patisserie</span><span class="ln-en">🧁 Bakery/Pastries</span></span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🥣 Soepen, sauzen en jams</span><span class="ln-en">🥣 Soups, sauces, jams</span></span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🫙 Fermentatie (kimchi, kombucha)</span><span class="ln-en">🫙 Fermentation (kimchi, kombucha)</span></span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🌯 Catering & Streetfood</span><span class="ln-en">🌯 Catering & Streetfood</span></span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🥩 Vleeswaren/Charcuterie</span><span class="ln-en">🥩 Meat/Charcuterie</span></span></div></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 3</span><span class="ln-en">Question 3</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Wat is je productie-schaal?</span>
+      <span class="ln-en">What's your production scale?</span>
+    </div>
+    <div class="opties">
+      <button class="optie" onclick="selectSingle(this,'schaal')"><div class="optie-top-row"><div class="optie-icon-wrap">🔬</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">R&D / Testfase</span><span class="ln-en">R&D / Testing</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this,'schaal')"><div class="optie-top-row"><div class="optie-icon-wrap">📦</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Middelgrote productie</span><span class="ln-en">Medium scale</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this,'schaal')"><div class="optie-top-row"><div class="optie-icon-wrap">🚀</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Groot volume</span><span class="ln-en">High volume</span></span></div><div class="optie-check"></div></div></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 4</span><span class="ln-en">Question 4</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Wat is je budget per dagdeel (4 uur)?</span>
+      <span class="ln-en">What's your budget per 4-hour slot?</span>
+    </div>
+    <div class="prijs-grid">
+      <button class="prijs-kaart" onclick="selectPrijs(this,'budget-h')"><span class="prijs-bedrag">Onder €50</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this,'budget-h')"><span class="prijs-bedrag">€50–€100</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this,'budget-h')"><span class="prijs-bedrag">€100–€150</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this,'budget-h')"><span class="prijs-bedrag">Boven €150</span></button>
+    </div>
+  </div>
+
+  <div class="nav-wrap">
+    <button class="btn-terug" onclick="goto('screen-1')">←</button>
+    <button class="btn-verder" onclick="goto('screen-4')">
+      <span class="ln-nl">Verder →</span><span class="ln-en">Next →</span>
+    </button>
+  </div>
+</div>
+
+<div class="screen" id="screen-4">
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 5</span><span class="ln-en">Question 5</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Heb je nog tips of feedback voor het platform?</span>
+      <span class="ln-en">Do you have suggestions for the platform?</span>
+    </div>
+    <textarea class="open-regel" id="open-tip" rows="4" placeholder="..."></textarea>
+  </div>
+
+  <div class card">
+    <div class="vraag-tekst" style="margin-bottom:16px;">
+      <span class="ln-nl">Hoe wil je op de hoogte blijven?</span>
+      <span class="ln-en">How should we stay in touch?</span>
+    </div>
+    <div class="opties">
+      <button class="optie" onclick="selectSingle(this,'mail-opt')">
+        <div class="optie-top-row">
+          <div class="optie-icon-wrap">📣</div>
+          <div class="optie-tekst">
+            <span class="optie-label"><span class="ln-nl">Houd me op de hoogte</span><span class="ln-en">Keep me updated</span></span>
+          </div>
+          <div class="optie-check"></div>
+        </div>
+      </button>
+      <button class="optie" onclick="selectSingle(this,'mail-opt')">
+        <div class="optie-top-row">
+          <div class="optie-icon-wrap">🔒</div>
+          <div class="optie-tekst">
+            <span class="optie-label"><span class="ln-nl">Blijf anoniem</span><span class="ln-en">Stay anonymous</span></span>
+          </div>
+          <div class="optie-check"></div>
+        </div>
+      </button>
+    </div>
+
+    <input type="email" id="respondent-email" class="open-regel" style="margin-top:15px;" placeholder="your@email.com">
+  </div>
+
+  <div class="nav-wrap">
+    <button class="btn-terug" onclick="goBackScreen()">←</button>
     <button class="btn-verder" id="verzend-btn" style="padding:14px 44px; font-size:16px;" onclick="verzendEnKlaar()">
-      <span class="ln-nl">Versturen ✓</span><span class="ln-en">Submit ✓</span>
+      <span class="ln-nl">Verzenden ✓</span><span class="ln-en">Submit ✓</span>
     </button>
   </div>
 </div>
 
 <div class="screen" id="screen-dank">
   <div class="card" style="text-align:center; padding:45px 20px;">
-    <div style="font-size:55px;">🌱</div>
+    <div class="check-circle">🎉</div>
     <div class="afsluiting-titel" style="margin-top:15px;">
-      <span class="ln-nl">Bedankt, tot ziens!</span>
+      <span class="ln-nl">Bedankt!</span>
       <span class="ln-en">Thank you!</span>
     </div>
     <div class="afsluiting-tekst">
-      <span class="ln-nl">We bouwen het samen. Platform lancering verwacht medio 2026.</span>
-      <span class="ln-en">We build it together. Launch expected mid-2026.</span>
+      <span class="ln-nl">Je antwoorden zijn opgeslagen. Platform lancering verwacht medio 2026.</span>
+      <span class="ln-en">Your answers are saved. Launch expected mid-2026.</span>
     </div>
   </div>
 </div>
@@ -316,6 +387,18 @@
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     window.scrollTo({top: 0, behavior: 'smooth'});
+    updateProgress(id);
+  }
+
+  function updateProgress(id) {
+    const screens = ['screen-0', 'screen-1', 'screen-2', 'screen-3', 'screen-4', 'screen-dank'];
+    const idx = screens.indexOf(id);
+    const pct = Math.round((idx / (screens.length - 1)) * 100);
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-pct').textContent = pct + '%';
+    
+    const pb = document.getElementById('progress-bar-wrap');
+    if (pb) pb.style.display = (id === 'screen-0' || id === 'screen-dank') ? 'none' : 'block';
   }
 
   function selectRol(rol) {
@@ -326,33 +409,57 @@
   }
 
   function handleRolNext() {
-    goto('screen-fin');
+    if (state.rol === 'aanbieder' || state.rol === 'beide') goto('screen-2');
+    else if (state.rol === 'zoeker') goto('screen-3');
+    else goto('screen-4');
   }
 
   function selectSingle(el) {
     const parent = el.closest('.opties');
-    parent.querySelectorAll('.optie').forEach(o => o.classList.remove('selected'));
+    if (parent) {
+      parent.querySelectorAll('.optie').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+  }
+
+  function selectPrijs(el) {
+    const parent = el.closest('.prijs-grid');
+    parent.querySelectorAll('.prijs-kaart').forEach(k => k.classList.remove('selected'));
     el.classList.add('selected');
+  }
+
+  function toggleMulti(el) {
+    el.classList.toggle('selected');
+  }
+
+  function goBackScreen() {
+    if (state.rol === 'aanbieder' || state.rol === 'beide') goto('screen-2');
+    else goto('screen-3');
   }
 
   async function verzendEnKlaar() {
     const email = document.getElementById('respondent-email').value.trim();
+    const tip = document.getElementById('open-tip').value.trim();
     const btn = document.getElementById('verzend-btn');
     btn.disabled = true;
 
     try {
+      const data = {
+        Rol: state.rol,
+        Email: email || 'Anonymous',
+        Tips: tip || 'No tips',
+        Taal: state.taal,
+        Datum: new Date().toLocaleString('nl-NL')
+      };
+
       await fetch('https://formspree.io/f/mgoqzkdj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          rol: state.rol,
-          email: email || 'Anonymous',
-          timestamp: new Date().toLocaleString('nl-NL')
-        })
+        body: JSON.stringify(data)
       });
       goto('screen-dank');
     } catch (err) {
-      alert('Error sending');
+      alert('Error sending response');
       btn.disabled = false;
     }
   }
