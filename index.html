@@ -31,15 +31,10 @@
   body.lang-en .ln-nl { display: none !important; }
   body.lang-nl .ln-en { display: none !important; }
 
-  .header { background: var(--groen); padding: 24px; text-align: center; position: relative; overflow: hidden; }
+  .header { background: var(--groen); padding: 24px; text-align: center; }
   .header-label { font-family:'Nunito',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:8px; }
   .header-title { font-family:'Nunito',sans-serif; font-size:24px; font-weight:900; color:#fff; line-height:1.2; margin-bottom:6px; }
   .header-sub { font-size:13px; color:rgba(255,255,255,0.75); }
-
-  .progress-bar-wrap { background:#fff; padding:12px 24px; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:100; display:none; }
-  .progress-meta { display:flex; justify-content:space-between; font-size:11px; color:var(--grijs); font-weight:600; margin-bottom:6px; }
-  .progress-track { height:5px; background:var(--border); border-radius:99px; overflow:hidden; }
-  .progress-fill { height:100%; background:linear-gradient(90deg,var(--groen),var(--groen-mid)); border-radius:99px; transition:width 0.4s ease; }
 
   .container { max-width:640px; margin:0 auto; padding:0 16px 80px; }
   .screen { display:none; animation:fadeUp 0.32s ease both; }
@@ -51,11 +46,11 @@
   .vraag-tekst { font-family:'Nunito',sans-serif; font-size:18px; font-weight:800; color:var(--donker); line-height:1.35; margin-bottom:5px; }
   .vraag-sub { font-size:13px; color:var(--grijs); margin-bottom:16px; line-height:1.55; }
 
-  .uitleg-blok { background:var(--warm); border-radius:10px; padding:12px 14px; margin-bottom:16px; font-size:13px; color:#5C4A30; line-height:1.55; border-left:3px solid var(--oranje-accent); text-align:left; }
+  .uitleg-blok { background:var(--warm); border-radius:10px; padding:12px 14px; margin-bottom:16px; font-size:13px; color:#5C4A30; line-height:1.55; border-left:3px solid var(--oranje-accent); }
   .uitleg-blok strong { color:var(--oranje-accent); }
 
   .opties { display:flex; flex-direction:column; gap:9px; }
-  .optie { display:flex; flex-direction:column; align-items:flex-start; gap:4px; padding:13px 15px; border:2px solid var(--border); border-radius:12px; cursor:pointer; transition:all 0.17s ease; background:#fff; text-align:left; width:100%; font-family:'Nunito Sans',sans-serif; }
+  .optie { display:flex; flex-direction:column; align-items:flex-start; gap:4px; padding:13px 15px; border:2px solid var(--border); border-radius:12px; cursor:pointer; transition:all 0.17s ease; background:#fff; text-align:left; width:100%; }
   .optie:hover { border-color:var(--groen-mid); background:var(--groen-licht); }
   .optie.selected { border-color:var(--groen); background:var(--groen-licht); }
   
@@ -69,7 +64,7 @@
   .optie.selected .optie-check::after { content:'✓'; color:#fff; font-size:11px; font-weight:800; }
 
   .multi-opties { display:flex; flex-direction:column; gap:8px; }
-  .multi-optie { display:flex; flex-direction:column; align-items:flex-start; padding:12px 14px; border:2px solid var(--border); border-radius:10px; cursor:pointer; transition:all 0.15s; background:#fff; width:100%; text-align:left; font-family:'Nunito Sans',sans-serif; }
+  .multi-optie { display:flex; flex-direction:column; align-items:flex-start; padding:12px 14px; border:2px solid var(--border); border-radius:10px; cursor:pointer; transition:all 0.15s; background:#fff; width:100%; }
   .multi-optie:hover { border-color:var(--groen-mid); background:var(--groen-licht); }
   .multi-optie.selected { border-color:var(--groen); background:var(--groen-licht); }
   .multi-top-row { display: flex; align-items: center; gap: 12px; width: 100%; }
@@ -78,9 +73,7 @@
   .multi-optie.selected .multi-box::after { content:'✓'; color:#fff; font-size:11px; font-weight:800; }
   .multi-label { font-size:14px; font-weight:600; color:var(--donker); display:block; }
 
-  .open-regel-wrap { margin-top:10px; text-align:left; }
-  .open-regel-label { font-size:12px; font-weight:700; color:var(--grijs); margin-bottom:5px; display:block; }
-  .open-regel { width:100%; border:2px solid var(--border); border-radius:10px; padding:11px 14px; font-family:'Nunito Sans',sans-serif; font-size:13px; outline:none; background:#fff; resize: vertical; }
+  .open-regel { width:100%; border:2px solid var(--border); border-radius:10px; padding:11px 14px; font-family:'Nunito Sans',sans-serif; font-size:13px; outline:none; background:#fff; resize: vertical; margin-top:10px; }
   .open-regel:focus { border-color:var(--groen); }
 
   .prijs-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
@@ -88,7 +81,6 @@
   .prijs-kaart:hover { border-color:var(--groen-mid); background:var(--groen-licht); }
   .prijs-kaart.selected { border-color:var(--groen); background:var(--groen-licht); }
   .prijs-bedrag { font-size:16px; font-weight:800; color:var(--donker); }
-  .prijs-omschr { font-size:11px; color:var(--grijs); font-family:'Nunito Sans',sans-serif; }
 
   .nav-wrap { margin-top:24px; display:flex; gap:10px; justify-content:flex-end; }
   .btn-terug { padding:12px 18px; border-radius:12px; border:2px solid var(--border); background:#fff; color:var(--grijs); font-weight:700; cursor:pointer; font-family:'Nunito',sans-serif; }
@@ -96,10 +88,6 @@
   .btn-verder:disabled { background:var(--border); color:var(--grijs); cursor:not-allowed; }
 
   .sectie-tag { display:inline-flex; align-items:center; background:var(--warm); border-radius:99px; padding:5px 14px; font-size:11px; font-weight:700; color:var(--oranje-accent); margin:22px 0 2px; text-transform:uppercase; }
-
-  .tijdslot-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px; }
-  .tijdslot { border:2px solid var(--border); border-radius:12px; padding:12px; cursor:pointer; text-align:center; background:#fff; font-family:'Nunito', sans-serif; font-size:13px; font-weight:700; color:var(--donker); display: flex; flex-direction: column; }
-  .tijdslot.selected { border-color:var(--groen); background:var(--groen-licht); }
 
   .check-circle { width:68px; height:68px; background:var(--groen); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; margin:0 auto 14px; }
   
@@ -121,14 +109,9 @@
     <span class="ln-en">Co-designing shared food kitchen infrastructure<br>Eindhoven &amp; SE-Brabant region</span>
   </div>
   <div class="header-sub">
-    <span class="ln-nl">Duurt ±5 minuten · Volledig anoniem</span>
-    <span class="ln-en">Takes ±5 minutes · Fully anonymous</span>
+    <span class="ln-nl">Duurt ±15 minuten · Volledig anoniem</span>
+    <span class="ln-en">Takes ±15 minutes · Fully anonymous</span>
   </div>
-</div>
-
-<div class="progress-bar-wrap" id="progress-bar-wrap">
-  <div class="progress-meta"><span id="progress-label">Start</span><span id="progress-pct">0%</span></div>
-  <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
 </div>
 
 <div class="container">
@@ -142,10 +125,10 @@
         <span class="ln-en">Your input builds the Hub</span>
       </div>
       <div class="vraag-sub" style="text-align:left; margin-top:15px; font-size:14px; line-height:1.6;">
-        <span class="ln-nl">In de regio Eindhoven en Zuidoost-Brabant ontbreekt het aan professionele gedeelde foodkeuken(s). Dit gaat over <strong>kleinschalige, semi-professionele productie</strong> van eten en drinken.</span>
-        <span class="ln-en">In the Eindhoven and Southeast Brabant region, professional shared food kitchen infrastructure is lacking. We investigate demand for <strong>small-scale, semi-professional food production</strong>.</span>
+        <span class="ln-nl">In de regio Eindhoven en Zuidoost-Brabant ontbreekt het aan professionele gedeelde foodkeuken(s). Dit gaat over <strong>kleinschalige, semi-professionele productie</strong> van eten en drinken — ambachtelijke limonade, kimchi, verse kaas, hybride burgers, en meer.</span>
+        <span class="ln-en">In the Eindhoven and Southeast Brabant region, professional shared food kitchen infrastructure is lacking. This is about <strong>small-scale, semi-professional food production</strong> — artisanal beverages, kimchi, fresh cheese, hybrid burgers, and more.</span>
       </div>
-      <button class="btn-verder" id="start-btn" onclick="goto('screen-1')">
+      <button class="btn-verder" onclick="goto('screen-1')">
         <span class="ln-nl">Starten →</span><span class="ln-en">Start →</span>
       </button>
     </div>
@@ -157,18 +140,14 @@
     <div class="vraag-nr"><span class="ln-nl">Vraag 1</span><span class="ln-en">Question 1</span></div>
     <div class="vraag-tekst">
       <span class="ln-nl">Wat past het beste bij jou?</span>
-      <span class="ln-en">Which option aligns with you?</span>
-    </div>
-    <div class="vraag-sub">
-      <span class="ln-nl">Op basis van jouw keuze stellen we de meest relevante vragen.</span>
-      <span class="ln-en">We adapt questions based on your selection.</span>
+      <span class="ln-en">Which option best describes you?</span>
     </div>
     <div class="opties">
       <button class="optie" id="rol-aanbieder" onclick="selectRol('aanbieder')">
         <div class="optie-top-row">
           <div class="optie-icon-wrap">🏠</div>
           <div class="optie-tekst">
-            <span class="optie-label"><span class="ln-nl">Ik heb een keuken en wil die verhuren</span><span class="ln-en">I have a kitchen and want to rent it</span></span>
+            <span class="optie-label"><span class="ln-nl">Ik heb een keuken en wil die verhuren</span><span class="ln-en">I have a kitchen and want to rent it out</span></span>
             <span class="optie-desc"><span class="ln-nl">Keukeneigenaar</span><span class="ln-en">Kitchen Owner</span></span>
           </div>
           <div class="optie-check"></div>
@@ -178,7 +157,7 @@
         <div class="optie-top-row">
           <div class="optie-icon-wrap">🔍</div>
           <div class="optie-tekst">
-            <span class="optie-label"><span class="ln-nl">Ik zoek een professionele keuken</span><span class="ln-en">I need to rent a professional kitchen</span></span>
+            <span class="optie-label"><span class="ln-nl">Ik zoek een professionele keuken</span><span class="ln-en">I need a professional kitchen to rent</span></span>
             <span class="optie-desc"><span class="ln-nl">Foodmaker</span><span class="ln-en">Foodmaker</span></span>
           </div>
           <div class="optie-check"></div>
@@ -188,12 +167,12 @@
         <div class="optie-top-row">
           <div class="optie-icon-wrap">🔄</div>
           <div class="optie-tekst">
-            <span class="optie-label"><span class="ln-nl">Beiden — Ik heb capaciteit EN zoek ook ruimte</span><span class="ln-en">Both — I have space and also need to rent</span></span>
+            <span class="optie-label"><span class="ln-nl">Beiden — ik heb capaciteit EN zoek ook ruimte</span><span class="ln-en">Both — I have space and also need to rent</span></span>
           </div>
           <div class="optie-check"></div>
         </div>
       </button>
-      <button class="optie" id="rol-nieuwsgierig" onclick="selectRol('nieuwsgierig')">
+      <button class="optie" id="rol-observer" onclick="selectRol('observer')">
         <div class="optie-top-row">
           <div class="optie-icon-wrap">👀</div>
           <div class="optie-tekst">
@@ -212,47 +191,159 @@
   </div>
 </div>
 
-<div class="screen" id="screen-2">
-  <div class="sectie-tag"><span class="ln-nl">🏠 Keukeneigenaar</span><span class="ln-en">🏠 Kitchen Owner</span></div>
+<!-- KEUKENEIGENAAR SECTION -->
+<div class="screen" id="screen-2-owner">
+  <div class="sectie-tag"><span class="ln-nl">🏠 Keukeneigenaar · Profiel</span><span class="ln-en">🏠 Kitchen Owner · Profile</span></div>
+  
   <div class="card">
     <div class="vraag-nr"><span class="ln-nl">Vraag 2</span><span class="ln-en">Question 2</span></div>
     <div class="vraag-tekst">
       <span class="ln-nl">Wat voor type keuken heb jij?</span>
-      <span class="ln-en">What type of kitchen do you have?</span>
+      <span class="ln-en">What type of kitchen do you operate?</span>
+    </div>
+    <div class="multi-opties">
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🍽️ Restaurant/Horecakeuken</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🍞 Bakkerij/Patisserie</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🥩 Slagerij</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🥛 Zuivelkeuken</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🐟 Visverwerkingskeuken</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🥗 Saladebereiding/Groentesnijderij</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🏭 Productiekeuken/Zorgkeuken</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">Anders</span><span class="ln-en">Other</span></span></div></button>
+    </div>
+    <input type="text" class="open-regel" placeholder="Beschrijf je keuken / Describe your kitchen">
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 2b</span><span class="ln-en">Question 2b</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Hoeveel werkoppervlak stel je beschikbaar?</span>
+      <span class="ln-en">How much working space is available?</span>
     </div>
     <div class="opties">
-      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">🍽️</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Restaurant/Horecakeuken</span><span class="ln-en">Restaurant/Catering Kitchen</span></span></div><div class="optie-check"></div></div></button>
-      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">🍞</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Bakkerij</span><span class="ln-en">Bakery</span></span></div><div class="optie-check"></div></div></button>
-      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">🥩</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Slagerij</span><span class="ln-en">Butcher</span></span></div><div class="optie-check"></div></div></button>
-      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">🥛</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Zuivelkeuken</span><span class="ln-en">Dairy Kitchen</span></span></div><div class="optie-check"></div></div></button>
-      <button class="optie" onclick="selectSingle(this,'keuken-type')"><div class="optie-top-row"><div class="optie-icon-wrap">Overig</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Anders</span><span class="ln-en">Other</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🪟</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Compact (1-2 meter)</span><span class="ln-en">Compact (1-2 meters)</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">📐</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Gemiddeld (2-4 meter)</span><span class="ln-en">Medium (2-4 meters)</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🏢</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Groot (4-8+ meter)</span><span class="ln-en">Large (4-8+ meters)</span></span></div><div class="optie-check"></div></div></button>
     </div>
   </div>
 
   <div class="card">
     <div class="vraag-nr"><span class="ln-nl">Vraag 3</span><span class="ln-en">Question 3</span></div>
     <div class="vraag-tekst">
-      <span class="ln-nl">Wat vind je een reële vergoeding per dagdeel (4 uur)?</span>
-      <span class="ln-en">What's a fair rate per 4-hour slot?</span>
+      <span class="ln-nl">Zijn er restricties qua certificering of allergenenbeheer?</span>
+      <span class="ln-en">Are there certification or allergen restrictions?</span>
     </div>
-    <div class="prijs-grid">
-      <button class="prijs-kaart" onclick="selectPrijs(this,'tarief-v')"><span class="prijs-bedrag">Onder €50</span></button>
-      <button class="prijs-kaart" onclick="selectPrijs(this,'tarief-v')"><span class="prijs-bedrag">€50–€100</span></button>
-      <button class="prijs-kaart" onclick="selectPrijs(this,'tarief-v')"><span class="prijs-bedrag">€100–€150</span></button>
-      <button class="prijs-kaart" onclick="selectPrijs(this,'tarief-v')"><span class="prijs-bedrag">Boven €150</span></button>
+    <div class="multi-opties">
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🚫 Geen harde beperkingen</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🥩 Strikte certificering (Halal, etc.)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🎓 Educatieve doelstellingen</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">⚖️ Leverancierscontracten beperken gebruik</span></div></button>
     </div>
   </div>
 
   <div class="nav-wrap">
     <button class="btn-terug" onclick="goto('screen-1')">←</button>
-    <button class="btn-verder" onclick="goto('screen-3')">
+    <button class="btn-verder" onclick="goto('screen-3-owner')">
       <span class="ln-nl">Verder →</span><span class="ln-en">Next →</span>
     </button>
   </div>
 </div>
 
-<div class="screen" id="screen-3">
-  <div class="sectie-tag"><span class="ln-nl">🍳 Foodmaker</span><span class="ln-en">🍳 Foodmaker</span></div>
+<div class="screen" id="screen-3-owner">
+  <div class="sectie-tag"><span class="ln-nl">🏠 Keukeneigenaar · Beschikbaarheid</span><span class="ln-en">🏠 Kitchen Owner · Availability</span></div>
+  
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 4</span><span class="ln-en">Question 4</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Wanneer staat jouw keuken leeg?</span>
+      <span class="ln-en">When is your kitchen available?</span>
+    </div>
+    <div class="multi-opties">
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🌅 Vroeg (05:00-09:00)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">☀️ Ochtend (09:00-13:00)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🌤️ Middag (13:00-17:00)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🌆 Avond (17:00-22:00)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🌙 Nacht (22:00-05:00)</span></div></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 4b</span><span class="ln-en">Question 4b</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Welke vorm van toezicht stel je als eis?</span>
+      <span class="ln-en">What supervision level do you require?</span>
+    </div>
+    <div class="opties">
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">👥</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Mijn medewerker moet aanwezig zijn</span><span class="ln-en">My staff must be present</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🤝</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Hub-buddy (gekwalificeerde begeleiding)</span><span class="ln-en">Hub-buddy (qualified supervision)</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🔓</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Zelfstandige toegang na screening</span><span class="ln-en">Independent access after screening</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🏅</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Afhankelijk van de persoon</span><span class="ln-en">Depends on the individual</span></span></div><div class="optie-check"></div></div></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 4c</span><span class="ln-en">Question 4c</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Hoe wil je toegang regelen?</span>
+      <span class="ln-en">How should access be managed?</span>
+    </div>
+    <div class="opties">
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🔔</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Persoonlijk in- en uitchecken</span><span class="ln-en">Personal check-in/check-out</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">📱</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Digitale app/pincode</span><span class="ln-en">Digital app/pin code</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🎚️</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Hybride model (eerst begeleiding)</span><span class="ln-en">Hybrid (supervised first, then digital)</span></span></div><div class="optie-check"></div></div></button>
+    </div>
+  </div>
+
+  <div class="nav-wrap">
+    <button class="btn-terug" onclick="goto('screen-2-owner')">←</button>
+    <button class="btn-verder" onclick="goto('screen-4-owner')">
+      <span class="ln-nl">Verder →</span><span class="ln-en">Next →</span>
+    </button>
+  </div>
+</div>
+
+<div class="screen" id="screen-4-owner">
+  <div class="sectie-tag"><span class="ln-nl">💰 Keukeneigenaar · Financieel</span><span class="ln-en">💰 Kitchen Owner · Pricing</span></div>
+  
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 5</span><span class="ln-en">Question 5</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Wat vind je een reële vergoeding per dagdeel (4 uur)?</span>
+      <span class="ln-en">What's a fair rate per 4-hour slot?</span>
+    </div>
+    <div class="prijs-grid">
+      <button class="prijs-kaart" onclick="selectPrijs(this)"><span class="prijs-bedrag">Onder €50</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this)"><span class="prijs-bedrag">€50–€100</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this)"><span class="prijs-bedrag">€100–€150</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this)"><span class="prijs-bedrag">Boven €150</span></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 5b</span><span class="ln-en">Question 5b</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Toeslag voor zwaardere apparatuur?</span>
+      <span class="ln-en">Surcharge for heavy equipment?</span>
+    </div>
+    <div class="opties">
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">Free</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Inbegrepen in basisprijs</span><span class="ln-en">Included in base rate</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🪙</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Kleine toeslag (+€10-€25)</span><span class="ln-en">Small surcharge (+€10-€25)</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">⚡</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Hogere toeslag (+€25-€50)</span><span class="ln-en">Higher surcharge (+€25-€50)</span></span></div><div class="optie-check"></div></div></button>
+    </div>
+  </div>
+
+  <div class="nav-wrap">
+    <button class="btn-terug" onclick="goto('screen-3-owner')">←</button>
+    <button class="btn-verder" onclick="handleOwnerComplete()">
+      <span class="ln-nl">Naar Foodmaker sectie →</span><span class="ln-en">To Foodmaker section →</span>
+    </button>
+  </div>
+</div>
+
+<!-- FOODMAKER SECTION -->
+<div class="screen" id="screen-2-maker">
+  <div class="sectie-tag"><span class="ln-nl">🍳 Foodmaker · Behoeftes</span><span class="ln-en">🍳 Foodmaker · Needs</span></div>
+  
   <div class="card">
     <div class="vraag-nr"><span class="ln-nl">Vraag 2</span><span class="ln-en">Question 2</span></div>
     <div class="vraag-tekst">
@@ -260,27 +351,95 @@
       <span class="ln-en">What will you produce?</span>
     </div>
     <div class="multi-opties">
-      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🧁 Banketbakkerij/Patisserie</span><span class="ln-en">🧁 Bakery/Pastries</span></span></div></button>
-      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🥣 Soepen, sauzen en jams</span><span class="ln-en">🥣 Soups, sauces, jams</span></span></div></button>
-      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🫙 Fermentatie (kimchi, kombucha)</span><span class="ln-en">🫙 Fermentation (kimchi, kombucha)</span></span></div></button>
-      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🌯 Catering & Streetfood</span><span class="ln-en">🌯 Catering & Streetfood</span></span></div></button>
-      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label"><span class="ln-nl">🥩 Vleeswaren/Charcuterie</span><span class="ln-en">🥩 Meat/Charcuterie</span></span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🧁 Banketbakkerij/Patisserie</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🥣 Soepen, sauzen, jams</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🫙 Fermentatie (kimchi, kombucha)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🌯 Catering & Streetfood</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🥩 Vleeswaren/Charcuterie</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🔬 R&D / Testing</span></div></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 2c</span><span class="ln-en">Question 2c</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Wat is je productie-schaal?</span>
+      <span class="ln-en">What's your production scale?</span>
+    </div>
+    <div class="opties">
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🔬</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">R&D / Testfase</span><span class="ln-en">R&D / Testing phase</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">📦</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Middelgrote batches</span><span class="ln-en">Medium batches</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🚀</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Groot volume</span><span class="ln-en">High volume</span></span></div><div class="optie-check"></div></div></button>
     </div>
   </div>
 
   <div class="card">
     <div class="vraag-nr"><span class="ln-nl">Vraag 3</span><span class="ln-en">Question 3</span></div>
     <div class="vraag-tekst">
-      <span class="ln-nl">Wat is je productie-schaal?</span>
-      <span class="ln-en">What's your production scale?</span>
+      <span class="ln-nl">Welke apparatuur heb je nodig?</span>
+      <span class="ln-en">What equipment do you need?</span>
     </div>
-    <div class="opties">
-      <button class="optie" onclick="selectSingle(this,'schaal')"><div class="optie-top-row"><div class="optie-icon-wrap">🔬</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">R&D / Testfase</span><span class="ln-en">R&D / Testing</span></span></div><div class="optie-check"></div></div></button>
-      <button class="optie" onclick="selectSingle(this,'schaal')"><div class="optie-top-row"><div class="optie-icon-wrap">📦</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Middelgrote productie</span><span class="ln-en">Medium scale</span></span></div><div class="optie-check"></div></div></button>
-      <button class="optie" onclick="selectSingle(this,'schaal')"><div class="optie-top-row"><div class="optie-icon-wrap">🚀</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Groot volume</span><span class="ln-en">High volume</span></span></div><div class="optie-check"></div></div></button>
+    <div class="multi-opties">
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🍽️ Algemene Horeca basis</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🍞 Bakkerij & Patisserie</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🥩 Slagerij & Vleeswaren</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🏭 Grootvolume apparatuur</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🧪 Mengen, persen & afvullen</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">📦 Verpakken & Etikettering</span></div></button>
     </div>
   </div>
 
+  <div class="nav-wrap">
+    <button class="btn-terug" onclick="handleMakerBack()">←</button>
+    <button class="btn-verder" onclick="goto('screen-3-maker')">
+      <span class="ln-nl">Verder →</span><span class="ln-en">Next →</span>
+    </button>
+  </div>
+</div>
+
+<div class="screen" id="screen-3-maker">
+  <div class="sectie-tag"><span class="ln-nl">🍳 Foodmaker · Planning</span><span class="ln-en">🍳 Foodmaker · Schedule</span></div>
+  
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 3b</span><span class="ln-en">Question 3b</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Hoe vaak wil je een keuken boeken?</span>
+      <span class="ln-en">How often do you need kitchen access?</span>
+    </div>
+    <div class="opties">
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">Zelden</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Zelden (1-2x/maand)</span><span class="ln-en">Rarely (1-2x/month)</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">📦</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Wekelijks</span><span class="ln-en">Weekly</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🚀</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Meerdere keren per week</span><span class="ln-en">Multiple times per week</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">Flexibel</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Flexibel / nog onzeker</span><span class="ln-en">Flexible / uncertain</span></span></div><div class="optie-check"></div></div></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 3c</span><span class="ln-en">Question 3c</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Welke tijdsloten zijn ideaal?</span>
+      <span class="ln-en">What time slots work best?</span>
+    </div>
+    <div class="multi-opties">
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🌅 Vroeg (05:00-09:00)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">☀️ Ochtend (09:00-13:00)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🌤️ Middag (13:00-17:00)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🌆 Avond (17:00-22:00)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🌙 Nacht (22:00-05:00)</span></div></button>
+    </div>
+  </div>
+
+  <div class="nav-wrap">
+    <button class="btn-terug" onclick="goto('screen-2-maker')">←</button>
+    <button class="btn-verder" onclick="goto('screen-4-maker')">
+      <span class="ln-nl">Verder →</span><span class="ln-en">Next →</span>
+    </button>
+  </div>
+</div>
+
+<div class="screen" id="screen-4-maker">
+  <div class="sectie-tag"><span class="ln-nl">💰 Foodmaker · Budget</span><span class="ln-en">💰 Foodmaker · Budget</span></div>
+  
   <div class="card">
     <div class="vraag-nr"><span class="ln-nl">Vraag 4</span><span class="ln-en">Question 4</span></div>
     <div class="vraag-tekst">
@@ -288,29 +447,57 @@
       <span class="ln-en">What's your budget per 4-hour slot?</span>
     </div>
     <div class="prijs-grid">
-      <button class="prijs-kaart" onclick="selectPrijs(this,'budget-h')"><span class="prijs-bedrag">Onder €50</span></button>
-      <button class="prijs-kaart" onclick="selectPrijs(this,'budget-h')"><span class="prijs-bedrag">€50–€100</span></button>
-      <button class="prijs-kaart" onclick="selectPrijs(this,'budget-h')"><span class="prijs-bedrag">€100–€150</span></button>
-      <button class="prijs-kaart" onclick="selectPrijs(this,'budget-h')"><span class="prijs-bedrag">Boven €150</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this)"><span class="prijs-bedrag">Onder €50</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this)"><span class="prijs-bedrag">€50–€100</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this)"><span class="prijs-bedrag">€100–€150</span></button>
+      <button class="prijs-kaart" onclick="selectPrijs(this)"><span class="prijs-bedrag">Boven €150</span></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 4b</span><span class="ln-en">Question 4b</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Extra services van interesse?</span>
+      <span class="ln-en">Interested in add-on services?</span>
+    </div>
+    <div class="multi-opties">
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">📋 Hulp bij regelgeving (HACCP, labels)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🤝 Hub-buddy (assistentie)</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">📦 Vooraf bestellen van grondstoffen</span></div></button>
+      <button class="multi-optie" onclick="toggleMulti(this)"><div class="multi-top-row"><div class="multi-box"></div><span class="multi-label">🧊 Koelopslagruimte tussen sessies</span></div></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="vraag-nr"><span class="ln-nl">Vraag 4c</span><span class="ln-en">Question 4c</span></div>
+    <div class="vraag-tekst">
+      <span class="ln-nl">Hoe wil je toegang hebben?</span>
+      <span class="ln-en">How should access be granted?</span>
+    </div>
+    <div class="opties">
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🔑</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Digitale app/pincode</span><span class="ln-en">Digital app/pin code</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🔔</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Persoonlijke ontvangst door eigenaar</span><span class="ln-en">Personal check-in with owner</span></span></div><div class="optie-check"></div></div></button>
+      <button class="optie" onclick="selectSingle(this)"><div class="optie-top-row"><div class="optie-icon-wrap">🔄</div><div class="optie-tekst"><span class="optie-label"><span class="ln-nl">Maakt me niet uit</span><span class="ln-en">Doesn't matter to me</span></span></div><div class="optie-check"></div></div></button>
     </div>
   </div>
 
   <div class="nav-wrap">
-    <button class="btn-terug" onclick="goto('screen-1')">←</button>
-    <button class="btn-verder" onclick="goto('screen-4')">
+    <button class="btn-terug" onclick="goto('screen-3-maker')">←</button>
+    <button class="btn-verder" onclick="goto('screen-final')">
       <span class="ln-nl">Verder →</span><span class="ln-en">Next →</span>
     </button>
   </div>
 </div>
 
-<div class="screen" id="screen-4">
+<!-- FINAL SCREEN -->
+<div class="screen" id="screen-final">
   <div class="card">
-    <div class="vraag-nr"><span class="ln-nl">Vraag 5</span><span class="ln-en">Question 5</span></div>
+    <div class="vraag-nr"><span class="ln-nl">Laatste vragen</span><span class="ln-en">Final questions</span></div>
     <div class="vraag-tekst">
-      <span class="ln-nl">Heb je nog tips of feedback voor het platform?</span>
-      <span class="ln-en">Do you have suggestions for the platform?</span>
+      <span class="ln-nl">Heb je tips of feedback?</span>
+      <span class="ln-en">Any suggestions or feedback?</span>
     </div>
-    <textarea class="open-regel" id="open-tip" rows="4" placeholder="..."></textarea>
+    <textarea class="open-regel" id="tips" rows="4" placeholder="..."></textarea>
   </div>
 
   <div class="card">
@@ -319,7 +506,7 @@
       <span class="ln-en">How should we stay in touch?</span>
     </div>
     <div class="opties">
-      <button class="optie" onclick="selectSingle(this,'mail-opt')">
+      <button class="optie" id="opt-updates" onclick="selectSingle(this)">
         <div class="optie-top-row">
           <div class="optie-icon-wrap">📣</div>
           <div class="optie-tekst">
@@ -328,7 +515,7 @@
           <div class="optie-check"></div>
         </div>
       </button>
-      <button class="optie" onclick="selectSingle(this,'mail-opt')">
+      <button class="optie" id="opt-anon" onclick="selectSingle(this)">
         <div class="optie-top-row">
           <div class="optie-icon-wrap">🔒</div>
           <div class="optie-tekst">
@@ -339,18 +526,18 @@
       </button>
     </div>
 
-    <input type="email" id="respondent-email" class="open-regel" style="margin-top:15px;" placeholder="your@email.com">
+    <input type="email" id="email" class="open-regel" placeholder="your@email.com">
   </div>
 
   <div class="nav-wrap">
-    <button class="btn-terug" onclick="goBackScreen()">←</button>
-    <button class="btn-verder" id="verzend-btn" style="padding:14px 44px; font-size:16px;" onclick="verzendEnKlaar()">
+    <button class="btn-terug" onclick="handleFinalBack()">←</button>
+    <button class="btn-verder" id="submit-btn" style="padding:14px 44px; font-size:16px;" onclick="submitForm()">
       <span class="ln-nl">Verzenden ✓</span><span class="ln-en">Submit ✓</span>
     </button>
   </div>
 </div>
 
-<div class="screen" id="screen-dank">
+<div class="screen" id="screen-thanks">
   <div class="card" style="text-align:center; padding:45px 20px;">
     <div class="check-circle">🎉</div>
     <div class="afsluiting-titel" style="margin-top:15px;">
@@ -359,7 +546,7 @@
     </div>
     <div class="afsluiting-tekst">
       <span class="ln-nl">Je antwoorden zijn opgeslagen. Platform lancering verwacht medio 2026.</span>
-      <span class="ln-en">Your answers are saved. Launch expected mid-2026.</span>
+      <span class="ln-en">Your answers are saved. Platform launch expected mid-2026.</span>
     </div>
   </div>
 </div>
@@ -367,7 +554,7 @@
 </div>
 
 <script>
-  let state = { rol: null, taal: 'nl', history: [] };
+  let state = { rol: null, taal: 'nl' };
 
   function setTaal(taal) {
     state.taal = taal;
@@ -380,18 +567,6 @@
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     window.scrollTo({top: 0, behavior: 'smooth'});
-    updateProgress(id);
-  }
-
-  function updateProgress(id) {
-    const screens = ['screen-0', 'screen-1', 'screen-2', 'screen-3', 'screen-4', 'screen-dank'];
-    const idx = screens.indexOf(id);
-    const pct = Math.round((idx / (screens.length - 1)) * 100);
-    document.getElementById('progress-fill').style.width = pct + '%';
-    document.getElementById('progress-pct').textContent = pct + '%';
-    
-    const pb = document.getElementById('progress-bar-wrap');
-    if (pb) pb.style.display = (id === 'screen-0' || id === 'screen-dank') ? 'none' : 'block';
   }
 
   function selectRol(rol) {
@@ -402,9 +577,27 @@
   }
 
   function handleRolNext() {
-    if (state.rol === 'aanbieder' || state.rol === 'beide') goto('screen-2');
-    else if (state.rol === 'zoeker') goto('screen-3');
-    else goto('screen-4');
+    if (state.rol === 'aanbieder') goto('screen-2-owner');
+    else if (state.rol === 'zoeker') goto('screen-2-maker');
+    else if (state.rol === 'beide') goto('screen-2-owner');
+    else goto('screen-final');
+  }
+
+  function handleOwnerComplete() {
+    if (state.rol === 'beide') goto('screen-2-maker');
+    else goto('screen-final');
+  }
+
+  function handleMakerBack() {
+    if (state.rol === 'beide') goto('screen-4-owner');
+    else goto('screen-1');
+  }
+
+  function handleFinalBack() {
+    if (state.rol === 'aanbieder') goto('screen-4-owner');
+    else if (state.rol === 'zoeker') goto('screen-4-maker');
+    else if (state.rol === 'beide') goto('screen-4-maker');
+    else goto('screen-1');
   }
 
   function selectSingle(el) {
@@ -425,24 +618,19 @@
     el.classList.toggle('selected');
   }
 
-  function goBackScreen() {
-    if (state.rol === 'aanbieder' || state.rol === 'beide') goto('screen-2');
-    else goto('screen-3');
-  }
-
-  async function verzendEnKlaar() {
-    const email = document.getElementById('respondent-email').value.trim();
-    const tip = document.getElementById('open-tip').value.trim();
-    const btn = document.getElementById('verzend-btn');
+  async function submitForm() {
+    const email = document.getElementById('email').value.trim();
+    const tips = document.getElementById('tips').value.trim();
+    const btn = document.getElementById('submit-btn');
     btn.disabled = true;
 
     try {
       const data = {
-        Rol: state.rol,
-        Email: email || 'Anonymous',
-        Tips: tip || 'No tips',
-        Taal: state.taal,
-        Datum: new Date().toLocaleString('nl-NL')
+        'Rol': state.rol,
+        'Taal': state.taal,
+        'Email': email || 'Anonymous',
+        'Tips': tips || 'Geen tips',
+        'Timestamp': new Date().toLocaleString('nl-NL')
       };
 
       await fetch('https://formspree.io/f/xredyppb', {
@@ -450,9 +638,9 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       });
-      goto('screen-dank');
+      goto('screen-thanks');
     } catch (err) {
-      alert('Error sending response');
+      alert('Error sending - please try again');
       btn.disabled = false;
     }
   }
